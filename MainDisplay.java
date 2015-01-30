@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class MainDisplay{
+	
 	public static void main(String[] args){
 		Pong p = new Pong();
 		JFrame frame = new JFrame();

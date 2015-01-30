@@ -4,12 +4,15 @@ public class Ball{
 	double x, y;
 	double velX, velY;
 	Ellipse2D circle;
-	static double radius = 10;
-	static double accelerationX = 0.3;
+	static double radius = 20;
+	static double accelerationX = 0.1;
+	static double accelerationY = 0.2;
+	static double startVelX = 1.0;
+	static double startVelY = 1.0;
 
 	public Ball(int x, int y){
-		velX = 1.0;
-		velY = 1.0;
+		velX = startVelX;
+		velY = startVelY;
 		this.x = x;
 		this.y = y;
 		circle = new Ellipse2D.Double(x, y, radius, radius);
@@ -27,7 +30,7 @@ public class Ball{
 	}
 
 	public void checkBounds(){
-		if(y > Pong.screenHeight - Ball.radius * 2  || y < 0){
+		if(y > Pong.screenHeight - Ball.radius  || y < 0){
 			velY = -velY;
 		}
 
