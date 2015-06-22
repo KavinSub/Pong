@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
 import java.util.Random;
+
 public class Pong extends JPanel implements ActionListener, KeyListener{
 	Timer t = new Timer(5, this); // Calls actionPerformed
 	int player1Score = 0, player2Score = 0; 
@@ -99,8 +100,8 @@ public class Pong extends JPanel implements ActionListener, KeyListener{
 			}
 			ball.x = screenWidth/2;
 			ball.y = screenHeight/2;
-			ball.velX = rng.nextDouble();
-			ball.velY = rng.nextDouble();
+			ball.velX = 1.0;
+			ball.velY = 1.0;
 			player1ScoreLabel.setText(String.format("Player 1 score is: %d\t", player1Score));
 			player2ScoreLabel.setText(String.format("Player 2 score is: %d", player2Score));
 		}
